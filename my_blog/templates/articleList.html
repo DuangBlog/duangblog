@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duang</title>
+</head>
+<body>
+
+<h1 style="text-align: center">Duang</h1>
+<div style="background-color: #e5e5e5;height: 1px;width: 100%"></div>
+
+<div style="display: flex;flex-direction: column;margin-left: 20%;margin-right: 20%">
+    {% for item in articles %}
+
+        <div style="display: flex;flex-direction: row;margin-top: 30px">
+            <img src="{{ item.emoji }}" style="width: 80px;height: 80px;"
+                 onclick="window.open('/detail/{{ item.id }}')">
+            <div style="margin-left: 20px">
+                <a href="/detail/{{ item.id }}"
+                   style="font-size: 25px;text-decoration: none;color: #333333">{{ item.title }}</a>
+                <div style="margin-top: 10px;color: #888888">{{ item.abstract }}</div>
+            </div>
+        </div>
+        <div style="background-color: #e5e5e5;height: 1px;width: 100%;margin-top: 30px;"></div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

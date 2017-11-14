@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duang</title>
+</head>
+<body>
+
+{% if lackParam %}
+    <div style="color: red">
+        标题、概要、MarkDown文件名称不能为空!!!
+    </div>
+{% endif %}
+
+<div>
+    <form method="post" action="/admin/upload">
+
+        <div style="margin-top: 30px;height: 40px">
+            <div style="float: left;width: 30%;text-align: right;height: 40px;font-size: 20px;line-height: 40px">
+                文章标题：
+            </div>
+            <input style="width: 60%;height: 40px;font-size: 20px;padding:0;margin: 0" name="title">
+        </div>
+        <div style="margin-top: 30px;height: 40px">
+            <div style="float: left;width: 30%;text-align: right;height: 40px;font-size: 20px;line-height: 40px">
+                概要：
+            </div>
+            <input style="width: 60%;height: 40px;font-size: 20px;padding:0;margin: 0" name="abstract">
+        </div>
+        <div style="margin-top: 30px;height: 40px">
+            <div style="float: left;width: 30%;text-align: right;height: 40px;font-size: 20px;line-height: 40px">
+                emoji图片名称：
+            </div>
+            <input style="width: 60%;height: 40px;font-size: 20px;padding:0;margin: 0" name="emojiName">
+        </div>
+        <div style="margin-top: 30px;height: 40px">
+            <div style="float: left;width: 30%;text-align: right;height: 40px;font-size: 20px;line-height: 40px">
+                MarkDown文件名称：
+            </div>
+            <input style="width: 60%;height: 40px;font-size: 20px;padding:0;margin: 0" name="mdFileName">
+        </div>
+        <div style="margin-top: 30px;height: 40px;text-align: center;">
+            <button type="submit"
+                    style="margin:auto;width: 100px;height: 40px;font-size: 20px;border-radius: 5px;border: 1px solid;background-color: white">
+                上传
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
